@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <meta name="description" content="Một góc nhỏ đáng yêu của Bảo Trân — nơi lưu giữ những điều ngọt ngào.">
+  <title>♡ Bảo Trân's little world ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--pink:#f7a9c4;--deep:#c75d88;--pale:#fff0f5;--cream:#fffaf7;--brown:#70535f;--lilac:#eee5ff;--yellow:#fff1bb}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--brown);font-family:'Nunito',sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;z-index:-1;background-image:radial-gradient(#f2b2ca 1px,transparent 1px);background-size:20px 20px}
+    a{color:inherit;text-decoration:none}
+    .topbar{position:sticky;top:0;z-index:10;background:#fffaf7eF;backdrop-filter:blur(12px);border-bottom:1px dashed #f0bfd0}
+    .nav{max-width:1080px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-weight:900;color:var(--deep);letter-spacing:.3px}.logo span{color:#e9a2bb}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem;font-weight:800}.navlinks a:hover{color:var(--deep)}
+    .hero{max-width:1080px;margin:30px auto 0;padding:34px 22px 54px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-block;padding:8px 14px;border:1px solid #f2c6d5;border-radius:999px;background:#fff;font-size:.8rem;font-weight:900;color:var(--deep);box-shadow:3px 3px 0 #fbe0e9}
+    h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:.98;letter-spacing:-3px;margin:20px 0 18px;color:#bd5c83}
+    h1 em{font-style:normal;color:#e9a1bc}
+    .hero p{font-size:1.05rem;line-height:1.85;max-width:540px}
+    .pillrow{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+    .pill{border:1px solid #f3c8d7;background:white;border-radius:999px;padding:8px 13px;font-size:.85rem;font-weight:800}
+    .hero-art{position:relative;min-height:350px;display:grid;place-items:center}
+    .sunburst{position:absolute;width:290px;height:290px;border-radius:50%;background:repeating-conic-gradient(from 8deg,#ffe5ed 0deg 12deg,#fff5f7 12deg 24deg);animation:spin 60s linear infinite}
+    .art-card{position:relative;width:min(300px,85%);padding:18px 18px 24px;background:white;border:2px solid #f6c9d8;border-radius:22px;box-shadow:10px 12px 0 #f8dce6;transform:rotate(3deg);text-align:center}
+    .bunny{font-size:7.6rem;line-height:1.25;filter:drop-shadow(0 5px 0 #ffe1ec);animation:bob 3s ease-in-out infinite}
+    .art-card strong{display:block;font-size:1.25rem;color:var(--deep)}.art-card small{display:block;margin-top:5px;color:#9c7c89}
+    .sticker{position:absolute;font-size:2rem;animation:bob 3.6s ease-in-out infinite}.s1{top:24px;right:12px}.s2{bottom:30px;left:0;animation-delay:.6s}.s3{top:48px;left:5px;animation-delay:1s}
+    section{max-width:1000px;margin:0 auto;padding:36px 22px}
+    .section-head{text-align:center;margin-bottom:24px}.kicker{font-size:.78rem;color:var(--deep);font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:7px 0;color:#bd5c83;letter-spacing:-.8px}
+    .section-head p{margin:0;color:#987c88}
+    .paper{background:#fff;border:1.5px solid #f4d1dd;border-radius:22px;padding:25px;box-shadow:5px 6px 0 #fbe8ee}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .fact{padding:15px;border-radius:16px;background:#fff7fa;border:1px dashed #efc0d1}
+    .fact b{display:block;font-size:.78rem;color:#bd7391;margin-bottom:5px}.fact span{font-weight:800}
+    .interest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .interest{background:white;border:1.5px solid #f4d1dd;border-radius:20px;padding:21px 17px;min-height:155px;box-shadow:4px 5px 0 #fbe8ee;transition:transform .2s,box-shadow .2s}
+    .interest:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:6px 8px 0 #f5d6e1}
+    .interest .emoji{font-size:2rem}.interest h3{margin:9px 0 5px;color:#bd5c83}.interest p{margin:0;font-size:.92rem;line-height:1.65}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .note{background:#fff4c9;border:1px solid #f0df9b;border-radius:20px;padding:23px;transform:rotate(-1deg)}
+    .note h3{margin:0 0 10px;color:#9c6d48}.note p{line-height:1.8;margin:0}
+    .dream{background:#f4edff;border:1px solid #ded0fb;border-radius:20px;padding:23px;transform:rotate(1deg)}
+    .dream h3{margin:0 0 10px;color:#8c70b6}.dream p{line-height:1.8;margin:0}
+    .quote{max-width:750px;margin:auto;text-align:center;background:#fff;border:2px dashed #efbfd0;border-radius:24px;padding:30px 24px}
+    .quote .big{font-size:2rem}.quote p{font-size:1.2rem;font-weight:800;line-height:1.7;color:#bd5c83}
+    footer{text-align:center;padding:38px 20px 50px;color:#a78493;font-size:.9rem}
+    .to-top{position:fixed;right:17px;bottom:18px;width:46px;height:46px;border:0;border-radius:50%;background:#eaa1bc;color:white;font-size:1.3rem;box-shadow:0 4px 0 #d982a3;cursor:pointer;z-index:5}
+    .floaty{position:fixed;top:-40px;pointer-events:none;z-index:20;animation:fall linear forwards;opacity:.9}
+    .tiny-note{text-align:center;font-size:.8rem;color:#a78493;margin-top:18px}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes fall{to{transform:translateY(110vh) rotate(300deg);opacity:0}}
+    @media(max-width:700px){.nav{align-items:flex-start}.navlinks{gap:9px 13px;justify-content:flex-end;font-size:.78rem}.hero{grid-template-columns:1fr;padding-top:25px;gap:10px}.hero-art{min-height:300px}.sunburst{width:240px;height:240px}.about-grid,.two-col{grid-template-columns:1fr}.interest-grid{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}.paper{padding:18px}}
+    @media(max-width:420px){.interest-grid{grid-template-columns:1fr}.nav{display:block}.navlinks{justify-content:flex-start;margin-top:10px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="logo" href="#home">♡ baotran's diary <span>✿</span></a>
+      <div class="navlinks">
+        <a href="#about">về tui</a><a href="#likes">sở thích</a><a href="#dreams">ước mơ</a><a href="#message">lời nhắn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">୨୧ welcome to my little world ୨୧</span>
+        <h1>hi, i'm<br><em>Bảo Trân</em> ♡</h1>
+        <p>Một chiếc cô gái mê chụp ảnh, yêu đồ ngọt và thích gom nhặt những điều nhỏ xíu dễ thương trong cuộc sống. Mong ngày nào cũng có nắng đẹp, đồ ăn ngon và thật nhiều chuyện vui!</p>
+        <div class="pillrow"><span class="pill">🎀 sweet soul</span><span class="pill">📸 photo lover</span><span class="pill">🍰 dessert mood</span></div>
+      </div>
+      <div class="hero-art" aria-label="Minh hoạ thỏ hồng dễ thương">
+        <div class="sunburst"></div><span class="sticker s1">✧</span><span class="sticker s2">♡</span><span class="sticker s3">🌷</span>
+        <div class="art-card"><div class="bunny">🐰</div><strong>tiny things, big happiness</strong><small>♡ made of sunshine & sugar ♡</small></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-head"><div class="kicker">✿ 01 — a little about me</div><h2>Nhật ký nhỏ của tui</h2><p>Rất vui vì bạn đã ghé qua góc nhỏ này!</p></div>
+      <div class="paper">
+        <div class="about-grid">
+          <div class="fact"><b>♡ TÊN GỌI</b><span>Bảo Trân</span></div>
+          <div class="fact"><b>☁️ TUỔI</b><span>15 tuổi</span></div>
+          <div class="fact"><b>🎂 SINH NHẬT</b><span>13 tháng 6, 2011</span></div>
+          <div class="fact"><b>🏫 TRƯỜNG HỌC</b><span>THPT Phú Nhuận</span></div>
+        </div>
+        <p style="line-height:1.9;margin:20px 2px 0">Tui là học sinh cấp 3, thích nhìn ngắm thế giới qua ống kính máy ảnh và để ý những điều bé bé xinh xinh. Tui mê đồ ngọt, thích sự tử tế và tất nhiên là… không có thiện cảm lắm với bài kiểm tra đâu nha 🥹💗</p>
+      </div>
+    </section>
+
+    <section id="likes">
+      <div class="section-head"><div class="kicker">♡ 02 — things i love</div><h2>Những điều làm tui vui</h2><p>Mấy chiếc sở thích nhỏ nhưng đáng iu lắm luôn.</p></div>
+      <div class="interest-grid">
+        <article class="interest"><div class="emoji">📸</div><h3>Chụp ảnh</h3><p>Lưu lại những khoảnh khắc đẹp, ánh nắng và những góc nhỏ bình yên.</p></article>
+        <article class="interest"><div class="emoji">🍰</div><h3>Đồ ngọt</h3><p>Bánh kem, kẹo ngọt và những món ngon có thể làm một ngày vui hơn.</p></article>
+        <article class="interest"><div class="emoji">🎀</div><h3>Đồ dễ thương</h3><p>Đồ linh tinh xinh xắn, sticker, phụ kiện và những món đồ nhìn là yêu.</p></article>
+        <article class="interest"><div class="emoji">🧸</div><h3>Squishy</h3><p>Mềm mềm, đáng yêu, nhìn thôi cũng thấy muốn bóp một cái.</p></article>
+        <article class="interest"><div class="emoji">🌷</div><h3>Hoa & thiên nhiên</h3><p>Hoa xinh, nắng dịu, cây xanh và những ngày trời thật đẹp.</p></article>
+        <article class="interest"><div class="emoji">💌</div><h3>Lời tử tế</h3><p>Tui thích những người nhẹ nhàng, biết quan tâm và nói lời dễ thương.</p></article>
+      </div>
+      <p class="tiny-note">+ đồ ăn ngon nữa nha, món ngon là chân ái ♡</p>
+    </section>
+
+    <section>
+      <div class="section-head"><div class="kicker">☁️ 03 — my kind of days</div><h2>Một chút về tui</h2><p>Những điều tui muốn giữ bên mình mỗi ngày.</p></div>
+      <div class="two-col">
+        <div class="note"><h3>🌼 Tui thích...</h3><p>Những ngày có nắng, thiên nhiên xanh mát, hoa tươi, đồ ăn ngon, những món đồ nhỏ xinh và người đối xử với nhau bằng sự tử tế.</p></div>
+        <div class="dream"><h3>🌙 Tui không thích...</h3><p>Bài kiểm tra bất ngờ lắm nha 😭 Tui mong mọi người có thể dịu dàng với nhau hơn một chút, vì ai cũng đang cố gắng theo cách riêng.</p></div>
+      </div>
+    </section>
+
+    <section id="dreams">
+      <div class="section-head"><div class="kicker">✧ 04 — someday, somewhere</div><h2>Ước mơ của tui</h2><p>Từ những điều nhỏ bé hôm nay đến tương lai mình mong muốn.</p></div>
+      <div class="paper" style="text-align:center;background:linear-gradient(135deg,#fff,#fff3f8 65%,#f5efff)">
+        <div style="font-size:2.6rem">💸 🌏 🎓</div>
+        <h3 style="font-size:1.45rem;color:#bd5c83;margin:10px 0">Giàu có, tự do và được khám phá thế giới!</h3>
+        <p style="line-height:1.9;max-width:650px;margin:0 auto">Tui mong sau này có thật nhiều tiền, làm công việc liên quan đến kinh tế và có cơ hội đi du học. Tui biết mình vẫn còn thời gian để học hỏi, trưởng thành và từng bước biến những điều đó thành hiện thực. Cố lên nè, tui của tương lai! ♡</p>
+      </div>
+    </section>
+
+    <section id="message">
+      <div class="section-head"><div class="kicker">💌 05 — a little message</div><h2>Gửi người ghé thăm</h2></div>
+      <div class="quote"><div class="big">🌷 ✨ 🐰</div><p>“Mong bạn luôn tìm thấy một điều nhỏ xíu để vui, một người dịu dàng để thương và một ngày mai đáng mong chờ.”</p><span>— gửi bạn một chiếc ôm thật mềm ♡</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-size:1.4rem;margin-bottom:8px">♡ ୨୧ ♡</div>
+    made with love, sugar & a little bit of sparkle<br>
+    <span>© Bảo Trân's little world · 2026</span>
+  </footer>
+  <button class="to-top" id="toTop" aria-label="Lên đầu trang" title="Lên đầu trang">↑</button>
+  <script>
+    const topButton = document.getElementById('toTop');
+    topButton.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    const decorations = ['♡','✧','♪','♫','🌸','✨'];
+    function makeFloaty(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const item = document.createElement('span');
+      item.className = 'floaty';
+      item.textContent = decorations[Math.floor(Math.random()*decorations.length)];
+      item.style.left = Math.random()*100 + 'vw';
+      item.style.fontSize = (14 + Math.random()*18) + 'px';
+      item.style.color = ['#e9a1bc','#c4a7ed','#f0c76b'][Math.floor(Math.random()*3)];
+      const duration = 5 + Math.random()*5;
+      item.style.animationDuration = duration + 's';
+      document.body.appendChild(item);
+      window.setTimeout(() => item.remove(), duration*1000);
+    }
+    window.setInterval(makeFloaty, 1250);
+  </script>
+</body>
+</html>
